@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/LayoutPhoto.astro";
+import formatDate from "@/utils/formatDate";
+import PhotoCard from "@/components/PhotoCard.astro";
+import portfolio from "@/data/portfolio";
+import type { TailwindColor } from "@/utils/types/tailwind";
+---
+
+<Layout title="Fonseca's Photos">
+    <main class="flex flex-col gap-20">
+      <h1 class="text-6xl text-center text-neutral-999">My Photo Gallery</h1>
+      <article class="grid grid-cols-3 gap-4">
+        {portfolio.map((Photo) => (
+          <PhotoCard {...Photo} />
+        ))}
+      </article>
+    </main>
+  </Layout>

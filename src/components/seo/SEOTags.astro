@@ -1,0 +1,71 @@
+---
+import { SEO } from "astro-seo";
+import { AstroFont } from "astro-font";
+import { SITE_URL } from "@/data/config";
+import type { HeadTags } from "@/utils/types/HeadTags";
+
+type Props = HeadTags;
+
+const { title, description, noindex, og } = Astro.props;
+
+const DEFAULT_TITLE_PAGE = "Fonseca's Website";
+const DEFAULT_DESCRIPTION_PAGE =
+  "Learn more about my projects, hobbies and academics!";
+const DEFAULT_URL_SITE = SITE_URL;
+
+const openGraph = {
+  title: title || og?.title || DEFAULT_TITLE_PAGE,
+  type: og?.type || "website",
+  image: og?.image || "/opengraph-image.jpg",
+  alt: og?.alt || "Personal Image",
+  url: DEFAULT_URL_SITE,
+  description: og?.description || DEFAULT_DESCRIPTION_PAGE,
+};
+---
+
+<head>
+  <SEO
+    charset="UTF-8"
+    title={title || DEFAULT_TITLE_PAGE}
+    description={description || DEFAULT_DESCRIPTION_PAGE}
+    noindex={noindex || false}
+    openGraph={{
+      basic: {
+        title: openGraph.title,
+        type: openGraph.type,
+        image: openGraph.image,
+      },
+      image: {
+        alt: openGraph.alt,
+      },
+    }}
+    twitter={{
+      creator: "",
+    }}
+    extend={{
+      link: [
+        { rel: "icon", href: "/favicon.svg" },
+        { rel: "sitemap", href: "/sitemap-index.xml" },
+      ],
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "generator", content: Astro.generator },
+      ],
+    }}
+  />
+  <AstroFont
+    config={[
+      {
+        src: [],
+        preload: false,
+        display: "swap",
+        selector: "html",
+        name: "Open Sans",
+        fallback: "sans-serif",
+        cssVariable: "font-open-sans",
+        googleFontsURL:
+          "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+      },
+    ]}
+  />
+</head>
