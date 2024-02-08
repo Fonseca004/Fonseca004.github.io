@@ -6,34 +6,34 @@ export type Photo = {
   
   const portfolio: Photo[] = [
     {
-      title: "Bird",
+      title: "Bird1",
       date: "Poland - February 2024",
-      img: "opengraph-image.jpg",
+      img: "/opengraph-image.jpg",
     },
     {
-        title: "Bird",
+        title: "Bird2",
         date: "Portugal, Setúbal - December 2023",
         img: "./opengraph-image.jpg",
     },
     {
-      title: "Bird",
+      title: "Bird3",
       date: "Portugal, Setúbal - December 2023",
       img: "./opengraph-image.jpg",
     },
     {
-      title: "Bird",
+      title: "Bird4",
       date: "Portugal, Setúbal - December 2023",
-      img: "https://Fonseca004.github.io/Fonseca004.github.io/public/opengraph-image.jpg",
+      img: "/opengraph-image.jpg",
     },
     {
-      title: "Bird",
+      title: "Bird5",
       date: "Portugal, Setúbal - December 2023",
-      img: "public/opengraph-image.jpg",
+      img: "/opengraph-image.jpg",
     },
     {
-      title: "Bird",
+      title: "Bird6",
       date: "Portugal, Setúbal - December 2023",
-      img: "public/opengraph-image.jpg",
+      img: "/opengraph-image.jpg",
     }
   
   ];
