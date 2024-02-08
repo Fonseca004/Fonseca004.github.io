@@ -8,7 +8,7 @@ export type Photo = {
     {
       title: "Bird",
       date: "Poland - February 2024",
-      img: "/opengraph-image.jpg",
+      img: "opengraph-image.jpg",
     },
     {
         title: "Bird",
