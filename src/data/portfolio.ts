@@ -13,22 +13,22 @@ export type Photo = {
     {
         title: "Bird",
         date: "Portugal, Setúbal - December 2023",
-        img: "/opengraph-image.jpg",
+        img: "./opengraph-image.jpg",
     },
     {
       title: "Bird",
       date: "Portugal, Setúbal - December 2023",
-      img: "opengraph-image.jpg",
+      img: "./opengraph-image.jpg",
     },
     {
       title: "Bird",
       date: "Portugal, Setúbal - December 2023",
-      img: "/opengraph-image.jpg",
+      img: "https://Fonseca004.github.io/Fonseca004.github.io/public/opengraph-image.jpg",
     },
     {
       title: "Bird",
       date: "Portugal, Setúbal - December 2023",
-      img: "@/public/opengraph-image.jpg",
+      img: "public/opengraph-image.jpg",
     },
     {
       title: "Bird",
