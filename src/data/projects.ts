@@ -9,7 +9,7 @@ const projects: Project[] = [
   {
     title: "This Website",
     techs: ["Astro", "TailwindCSS"],
-    link: "https://github.com/Fonseca004",
+    link: "https://github.com/Fonseca004/Fonseca004.github.io",
   },
   {
     title: "Homeserver",
